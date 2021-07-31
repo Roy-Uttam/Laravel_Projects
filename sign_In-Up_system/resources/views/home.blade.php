@@ -14,36 +14,47 @@
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
-          <form action="#" class="sign-in-form">
+
+          <form id="login" action="/users" method="GET" class="sign-in-form">
             <h2 class="title">Sign in</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
+              <input type="text" name="uname" placeholder="Username" />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input type="password" name="pass" placeholder="Password" />
             </div>
             <input type="submit" value="Login" class="btn solid" />
            
           </form>
-          <form action="#" class="sign-up-form">
+
+
+          <form id="Regform" action="/users" method="POST" class="sign-up-form">
+
+            @csrf
+
             <h2 class="title">Sign up</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
+              <input type="text" name="uname" placeholder="Username" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-phone"></i>
+              <input type="text" name="mobile" placeholder="Mobile" />
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" />
+              <input type="email" name="email" placeholder="Email" />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input type="password" name="pass" placeholder="Password" />
             </div>
             <input type="submit" class="btn" value="Sign up" />
             
           </form>
+          
         </div>
       </div>
 
